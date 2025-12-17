@@ -4,6 +4,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from json import dumps
 
 from manager import QueueClient
+
 from task import Task
 
 
@@ -26,7 +27,7 @@ class Proxy(BaseHTTPRequestHandler):
         content_length = int(self.headers.get("content-length"))
         content = self.rfile.read(content_length)
         t = Task.from_json(content.decode())
-        self.client.result_queue.put(t)
+        t = self.client.result_queue.put(t)  
         self.wfile.write(bytes(dumps({"status": "ok"}), "utf-8"))
 
 
