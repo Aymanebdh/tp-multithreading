@@ -8,3 +8,25 @@ wheels/
 
 # Virtual environments
 .venv
+low_level
+cpp/build/
+cpp/*.so
+# Exécutables
+/low_level
+cpp/build/
+cpp/*.so
+cpp/*.a
+*.o
+*.out
+
+# Environnements Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers système
+.DS_Store
+Thumbs.db
