@@ -1,6 +1,7 @@
 import numpy as np
 import json
 
+
 class Task:
     def __init__(self, size=1000):
         self.size = size
@@ -20,7 +21,7 @@ class Task:
             "size": self.size,
             "A": self.A.tolist() if self.A is not None else None,
             "B": self.B.tolist() if self.B is not None else None,
-            "x": self.x.tolist() if self.x is not None else None
+            "x": self.x.tolist() if self.x is not None else None,
         }
         return json.dumps(data)
 
@@ -72,6 +73,7 @@ class Task:
             return True
         except ValueError:
             return False
+
 
 if __name__ == "__main__":
     # Petit test rapide
