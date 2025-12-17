@@ -1,6 +1,7 @@
 import unittest
 from task import Task
 
+
 class TestTaskJSON(unittest.TestCase):
     def test_json_roundtrip(self):
         a = Task()
@@ -19,5 +20,6 @@ class TestTaskJSON(unittest.TestCase):
 
         self.assertEqual(a, b)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
