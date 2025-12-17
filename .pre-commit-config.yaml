@@ -19,4 +19,4 @@ repos:
     hooks:
       - id: clang-format
         args: [--style=file, --fallback-style=LLVM]
-        stages: [manual]  
+        stages: [manual]  # NE PAS exécuter automatiquement
